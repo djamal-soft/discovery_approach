@@ -7,6 +7,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface MicroserviceRepository extends JpaRepository<Microservice, Integer> {
 
-    Microservice findByKeysContaining(String keys);
-    Microservice findByKeysContainingAndVersion(String keys, float version);
+    Microservice findById(int id);
+    Microservice findByMkeysContaining(String mkeys);
+    Microservice findByMkeysContainingAndVersion(String mkeys, float version);
 }

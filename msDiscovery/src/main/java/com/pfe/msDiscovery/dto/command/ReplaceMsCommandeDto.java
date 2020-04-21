@@ -4,7 +4,7 @@ package com.pfe.msDiscovery.dto.command;
 public class ReplaceMsCommandeDto {
 
     private int id;
-    private String keys;
+    private String mkeys;
     private String address;
     private float version;
 
@@ -19,12 +19,12 @@ public class ReplaceMsCommandeDto {
         this.id = id;
     }
 
-    public String getKeys() {
-        return keys;
+    public String getMkeys() {
+        return mkeys;
     }
 
-    public void setKeys(String keys) {
-        this.keys = keys;
+    public void setMkeys(String mkeys) {
+        this.mkeys = mkeys;
     }
 
     public String getAddress() {
@@ -47,7 +47,7 @@ public class ReplaceMsCommandeDto {
     public String toString() {
         return "AddMsCommandDto{" +
                 "id=" + id +
-                ", keys='" + keys + '\'' +
+                ", mkeys='" + mkeys + '\'' +
                 ", address='" + address + '\'' +
                 ", version=" + version +
                 '}';

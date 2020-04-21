@@ -1,18 +1,15 @@
 package com.pfe.msDiscovery.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
-@Table(name = "microservices")
+@Table(name = "microservices", uniqueConstraints={@UniqueConstraint(columnNames = {"address", "version"})})
 public class Microservice {
 
     @Id
     @GeneratedValue
     private int id;
-    private String keys;
+    private String mkeys;
     private String address;
     private float version;
 
@@ -27,12 +24,12 @@ public class Microservice {
         this.id = id;
     }
 
-    public String getKeys() {
-        return keys;
+    public String getMkeys() {
+        return mkeys;
     }
 
-    public void setKeys(String keys) {
-        this.keys = keys;
+    public void setMkeys(String mkeys) {
+        this.mkeys = mkeys;
     }
 
     public String getAddress() {
@@ -55,7 +52,7 @@ public class Microservice {
     public String toString() {
         return "AddMsCommandDto{" +
                 "id=" + id +
-                ", keys='" + keys + '\'' +
+                ", mkeys='" + mkeys + '\'' +
                 ", address='" + address + '\'' +
                 ", version=" + version +
                 '}';
